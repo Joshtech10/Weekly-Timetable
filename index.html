@@ -164,6 +164,9 @@
     .church    .dot-bar { background: #ec4899; }
     .prep      .dot-bar { background: #06b6d4; }
     .personal  .dot-bar { background: #a78bfa; }
+    .walk      .dot-bar { background: #84cc16; }
+    .grocery   .dot-bar { background: #14b8a6; }
+    .swim      .dot-bar { background: #0ea5e9; }
 
     .uber      .block-label { color: #fbbf24; }
     .sleep     .block-label { color: #818cf8; }
@@ -175,8 +178,12 @@
     .church    .block-label { color: #f472b6; }
     .prep      .block-label { color: #22d3ee; }
     .personal  .block-label { color: #a78bfa; }
+    .walk      .block-label { color: #a3e635; }
+    .grocery   .block-label { color: #2dd4bf; }
+    .swim      .block-label { color: #38bdf8; }
 
-    .gym { background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2); }
+    .gym  { background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2); }
+    .swim { background: rgba(14,165,233,0.07); border: 1px solid rgba(14,165,233,0.2); }
 
     /* ── GYM SECTION ── */
     .gym-section {
@@ -295,15 +302,17 @@
 <!-- HEADER -->
 <div class="header">
   <h1>⚡ Josh's Weekly Timetable</h1>
-  <p>Full schedule · Uber · Skill Development · Gym · Life</p>
+  <p>Full schedule · Uber · Skill Development · Gym · Walk · Swim · Groceries · Life</p>
 </div>
 
 <!-- STATS -->
 <div class="stats-bar">
-  <div class="stat"><div class="stat-val">~46h</div><div class="stat-label">Uber / Week</div></div>
-  <div class="stat"><div class="stat-val">~28h</div><div class="stat-label">Skill Dev / Week</div></div>
+  <div class="stat"><div class="stat-val">~65h</div><div class="stat-label">Uber / Week</div></div>
+  <div class="stat"><div class="stat-val">~25h</div><div class="stat-label">Skill Dev / Week</div></div>
   <div class="stat"><div class="stat-val">3×</div><div class="stat-label">Gym Sessions</div></div>
-  <div class="stat"><div class="stat-val">~42h</div><div class="stat-label">Sleep / Week</div></div>
+  <div class="stat"><div class="stat-val">~45h</div><div class="stat-label">Sleep / Week</div></div>
+  <div class="stat"><div class="stat-val">1×</div><div class="stat-label">Swim Session</div></div>
+  <div class="stat"><div class="stat-val">4×</div><div class="stat-label">Leisure Walks</div></div>
 </div>
 
 <!-- LEGEND -->
@@ -313,9 +322,12 @@
   <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div>Skill Development</div>
   <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>Gym</div>
   <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Meal</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>Car Charging</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div>Prep / Routine</div>
   <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div>Rest</div>
   <div class="legend-item"><div class="legend-dot" style="background:#ec4899"></div>Church</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#84cc16"></div>Leisure Walk</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#14b8a6"></div>Grocery</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#0ea5e9"></div>Swimming</div>
 </div>
 
 <!-- WEEK GRID -->
@@ -325,7 +337,7 @@
   <div class="day-card mon">
     <div class="day-header">
       <span class="day-name">🗓 Monday</span>
-      <span class="day-badge">Uber + Gym + Skill</span>
+      <span class="day-badge">Uber + Walk + Gym + Skill</span>
     </div>
     <div class="schedule">
       <div class="block uber">
@@ -333,45 +345,63 @@
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving</div>
-          <div class="block-sub">03:00 AM – 02:00 PM · 11 hrs</div>
+          <div class="block-sub">04:15 AM – 02:15 PM · 10 hrs</div>
         </div>
-        <div class="block-time">03:00 AM</div>
+        <div class="block-time">04:15 AM</div>
+      </div>
+      <div class="block meal">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🍽️</div>
+        <div class="block-info">
+          <div class="block-label">Lunch & Recovery</div>
+          <div class="block-sub">02:15 PM – 02:45 PM · 30 min</div>
+        </div>
+        <div class="block-time">02:15 PM</div>
+      </div>
+      <div class="block walk">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚶</div>
+        <div class="block-info">
+          <div class="block-label">Leisure Walk</div>
+          <div class="block-sub">02:45 PM – 03:30 PM · 45 min</div>
+        </div>
+        <div class="block-time">02:45 PM</div>
       </div>
       <div class="block gym">
         <div class="dot-bar"></div>
         <div class="block-icon">🏋️</div>
         <div class="block-info">
           <div class="block-label">GYM — Full Body Workout A</div>
-          <div class="block-sub">02:00 PM – 03:30 PM · 1.5 hrs</div>
+          <div class="block-sub">03:30 PM – 05:00 PM · 1.5 hrs</div>
         </div>
-        <div class="block-time">02:00 PM</div>
+        <div class="block-time">03:30 PM</div>
       </div>
       <div class="block meal">
         <div class="dot-bar"></div>
         <div class="block-icon">🥗</div>
         <div class="block-info">
-          <div class="block-label">Post-Workout Meal & Recovery</div>
-          <div class="block-sub">03:30 PM – 04:30 PM · 1 hr</div>
+          <div class="block-label">Post-Workout Meal & Shower</div>
+          <div class="block-sub">05:00 PM – 05:30 PM · 30 min</div>
         </div>
-        <div class="block-time">03:30 PM</div>
-      </div>
-      <div class="block rest">
-        <div class="dot-bar"></div>
-        <div class="block-icon">🛋️</div>
-        <div class="block-info">
-          <div class="block-label">Rest & Personal Time</div>
-          <div class="block-sub">04:30 PM – 07:00 PM · 2.5 hrs</div>
-        </div>
-        <div class="block-time">04:30 PM</div>
+        <div class="block-time">05:00 PM</div>
       </div>
       <div class="block skill">
         <div class="dot-bar"></div>
         <div class="block-icon">💻</div>
         <div class="block-info">
           <div class="block-label">Skill Development</div>
-          <div class="block-sub">07:00 PM – 02:00 AM · 7 hrs</div>
+          <div class="block-sub">05:30 PM – 09:00 PM · 3.5 hrs</div>
         </div>
-        <div class="block-time">07:00 PM</div>
+        <div class="block-time">05:30 PM</div>
+      </div>
+      <div class="block sleep">
+        <div class="dot-bar"></div>
+        <div class="block-icon">😴</div>
+        <div class="block-info">
+          <div class="block-label">Sleeping</div>
+          <div class="block-sub">09:00 PM – 03:30 AM · 6.5 hrs</div>
+        </div>
+        <div class="block-time">09:00 PM</div>
       </div>
     </div>
   </div>
@@ -380,53 +410,71 @@
   <div class="day-card tue">
     <div class="day-header">
       <span class="day-name">🗓 Tuesday</span>
-      <span class="day-badge">Sleep + Skill</span>
+      <span class="day-badge">Uber + Walk + Grocery + Skill</span>
     </div>
     <div class="schedule">
-      <div class="block sleep">
+      <div class="block uber">
         <div class="dot-bar"></div>
-        <div class="block-icon">😴</div>
+        <div class="block-icon">🚗</div>
         <div class="block-info">
-          <div class="block-label">Sleeping</div>
-          <div class="block-sub">02:00 AM – 10:00 AM · 8 hrs</div>
+          <div class="block-label">Uber Driving</div>
+          <div class="block-sub">04:15 AM – 02:15 PM · 10 hrs</div>
         </div>
-        <div class="block-time">02:00 AM</div>
+        <div class="block-time">04:15 AM</div>
       </div>
-      <div class="block prep">
+      <div class="block meal">
         <div class="dot-bar"></div>
-        <div class="block-icon">☕</div>
+        <div class="block-icon">🍽️</div>
         <div class="block-info">
-          <div class="block-label">Morning Routine & Breakfast</div>
-          <div class="block-sub">10:00 AM – 10:30 AM · 30 min</div>
+          <div class="block-label">Lunch & Rest</div>
+          <div class="block-sub">02:15 PM – 02:45 PM · 30 min</div>
         </div>
-        <div class="block-time">10:00 AM</div>
+        <div class="block-time">02:15 PM</div>
+      </div>
+      <div class="block walk">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚶</div>
+        <div class="block-info">
+          <div class="block-label">Leisure Walk</div>
+          <div class="block-sub">02:45 PM – 03:30 PM · 45 min</div>
+        </div>
+        <div class="block-time">02:45 PM</div>
       </div>
       <div class="block skill">
         <div class="dot-bar"></div>
         <div class="block-icon">💻</div>
         <div class="block-info">
           <div class="block-label">Skill Development</div>
-          <div class="block-sub">10:30 AM – 05:00 PM · 6.5 hrs</div>
+          <div class="block-sub">03:30 PM – 05:30 PM · 2 hrs</div>
         </div>
-        <div class="block-time">10:30 AM</div>
+        <div class="block-time">03:30 PM</div>
       </div>
-      <div class="block charge">
+      <div class="block grocery">
         <div class="dot-bar"></div>
-        <div class="block-icon">🔋🍽️</div>
+        <div class="block-icon">🛒</div>
         <div class="block-info">
-          <div class="block-label">Car Charging & Dinner</div>
-          <div class="block-sub">05:00 PM – 07:00 PM · 2 hrs</div>
+          <div class="block-label">Grocery Shopping</div>
+          <div class="block-sub">05:30 PM – 07:00 PM · 1.5 hrs</div>
         </div>
-        <div class="block-time">05:00 PM</div>
+        <div class="block-time">05:30 PM</div>
+      </div>
+      <div class="block skill">
+        <div class="dot-bar"></div>
+        <div class="block-icon">💻</div>
+        <div class="block-info">
+          <div class="block-label">Skill Development</div>
+          <div class="block-sub">07:00 PM – 09:00 PM · 2 hrs</div>
+        </div>
+        <div class="block-time">07:00 PM</div>
       </div>
       <div class="block sleep">
         <div class="dot-bar"></div>
         <div class="block-icon">😴</div>
         <div class="block-info">
           <div class="block-label">Sleeping</div>
-          <div class="block-sub">07:00 PM – 02:00 AM · 7 hrs</div>
+          <div class="block-sub">09:00 PM – 03:30 AM · 6.5 hrs</div>
         </div>
-        <div class="block-time">07:00 PM</div>
+        <div class="block-time">09:00 PM</div>
       </div>
     </div>
   </div>
@@ -435,7 +483,7 @@
   <div class="day-card wed">
     <div class="day-header">
       <span class="day-name">🗓 Wednesday</span>
-      <span class="day-badge">Uber + Gym + Skill</span>
+      <span class="day-badge">Uber + Gym + Walk + Skill</span>
     </div>
     <div class="schedule">
       <div class="block uber">
@@ -443,64 +491,9 @@
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving</div>
-          <div class="block-sub">03:00 AM – 02:00 PM · 11 hrs</div>
+          <div class="block-sub">04:15 AM – 10:00 AM · 5h 45min</div>
         </div>
-        <div class="block-time">03:00 AM</div>
-      </div>
-      <div class="block gym">
-        <div class="dot-bar"></div>
-        <div class="block-icon">🏋️</div>
-        <div class="block-info">
-          <div class="block-label">GYM — Full Body Workout B</div>
-          <div class="block-sub">02:00 PM – 03:30 PM · 1.5 hrs</div>
-        </div>
-        <div class="block-time">02:00 PM</div>
-      </div>
-      <div class="block meal">
-        <div class="dot-bar"></div>
-        <div class="block-icon">🥗</div>
-        <div class="block-info">
-          <div class="block-label">Post-Workout Meal & Recovery</div>
-          <div class="block-sub">03:30 PM – 04:30 PM · 1 hr</div>
-        </div>
-        <div class="block-time">03:30 PM</div>
-      </div>
-      <div class="block rest">
-        <div class="dot-bar"></div>
-        <div class="block-icon">🛋️</div>
-        <div class="block-info">
-          <div class="block-label">Rest & Personal Time</div>
-          <div class="block-sub">04:30 PM – 07:00 PM · 2.5 hrs</div>
-        </div>
-        <div class="block-time">04:30 PM</div>
-      </div>
-      <div class="block skill">
-        <div class="dot-bar"></div>
-        <div class="block-icon">💻</div>
-        <div class="block-info">
-          <div class="block-label">Skill Development</div>
-          <div class="block-sub">07:00 PM – 02:00 AM · 7 hrs</div>
-        </div>
-        <div class="block-time">07:00 PM</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── THURSDAY ── -->
-  <div class="day-card thu">
-    <div class="day-header">
-      <span class="day-name">🗓 Thursday</span>
-      <span class="day-badge">Sleep + Skill</span>
-    </div>
-    <div class="schedule">
-      <div class="block sleep">
-        <div class="dot-bar"></div>
-        <div class="block-icon">😴</div>
-        <div class="block-info">
-          <div class="block-label">Sleeping</div>
-          <div class="block-sub">02:00 AM – 10:00 AM · 8 hrs</div>
-        </div>
-        <div class="block-time">02:00 AM</div>
+        <div class="block-time">04:15 AM</div>
       </div>
       <div class="block prep">
         <div class="dot-bar"></div>
@@ -516,36 +509,72 @@
         <div class="block-icon">💻</div>
         <div class="block-info">
           <div class="block-label">Skill Development</div>
-          <div class="block-sub">10:30 AM – 05:00 PM · 6.5 hrs</div>
+          <div class="block-sub">10:30 AM – 12:00 PM · 1.5 hrs</div>
         </div>
         <div class="block-time">10:30 AM</div>
       </div>
-      <div class="block charge">
+      <div class="block meal">
         <div class="dot-bar"></div>
-        <div class="block-icon">🔋🍽️</div>
+        <div class="block-icon">🍽️</div>
         <div class="block-info">
-          <div class="block-label">Car Charging & Dinner</div>
-          <div class="block-sub">05:00 PM – 07:00 PM · 2 hrs</div>
+          <div class="block-label">Lunch</div>
+          <div class="block-sub">12:00 PM – 12:30 PM · 30 min</div>
         </div>
-        <div class="block-time">05:00 PM</div>
+        <div class="block-time">12:00 PM</div>
+      </div>
+      <div class="block gym">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🏋️</div>
+        <div class="block-info">
+          <div class="block-label">GYM — Full Body Workout B</div>
+          <div class="block-sub">12:30 PM – 02:00 PM · 1.5 hrs</div>
+        </div>
+        <div class="block-time">12:30 PM</div>
+      </div>
+      <div class="block meal">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🥗</div>
+        <div class="block-info">
+          <div class="block-label">Post-Workout Meal & Shower</div>
+          <div class="block-sub">02:00 PM – 02:30 PM · 30 min</div>
+        </div>
+        <div class="block-time">02:00 PM</div>
+      </div>
+      <div class="block walk">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚶</div>
+        <div class="block-info">
+          <div class="block-label">Leisure Walk</div>
+          <div class="block-sub">02:30 PM – 03:15 PM · 45 min</div>
+        </div>
+        <div class="block-time">02:30 PM</div>
+      </div>
+      <div class="block skill">
+        <div class="dot-bar"></div>
+        <div class="block-icon">💻</div>
+        <div class="block-info">
+          <div class="block-label">Skill Development</div>
+          <div class="block-sub">03:15 PM – 09:00 PM · 5.75 hrs</div>
+        </div>
+        <div class="block-time">03:15 PM</div>
       </div>
       <div class="block sleep">
         <div class="dot-bar"></div>
         <div class="block-icon">😴</div>
         <div class="block-info">
           <div class="block-label">Sleeping</div>
-          <div class="block-sub">07:00 PM – 02:00 AM · 7 hrs</div>
+          <div class="block-sub">09:00 PM – 03:30 AM · 6.5 hrs</div>
         </div>
-        <div class="block-time">07:00 PM</div>
+        <div class="block-time">09:00 PM</div>
       </div>
     </div>
   </div>
 
-  <!-- ── FRIDAY ── -->
-  <div class="day-card fri">
+  <!-- ── THURSDAY ── -->
+  <div class="day-card thu">
     <div class="day-header">
-      <span class="day-name">🗓 Friday</span>
-      <span class="day-badge">Uber + Gym + Sleep</span>
+      <span class="day-name">🗓 Thursday</span>
+      <span class="day-badge">Uber + Swimming + Skill</span>
     </div>
     <div class="schedule">
       <div class="block uber">
@@ -553,25 +582,34 @@
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving</div>
-          <div class="block-sub">03:00 AM – 02:00 PM · 11 hrs</div>
+          <div class="block-sub">04:15 AM – 02:15 PM · 10 hrs</div>
         </div>
-        <div class="block-time">03:00 AM</div>
+        <div class="block-time">04:15 AM</div>
       </div>
-      <div class="block rest">
+      <div class="block meal">
         <div class="dot-bar"></div>
-        <div class="block-icon">🛋️</div>
+        <div class="block-icon">🍽️</div>
         <div class="block-info">
-          <div class="block-label">Rest & Lunch</div>
-          <div class="block-sub">02:00 PM – 04:00 PM · 2 hrs</div>
+          <div class="block-label">Lunch & Rest</div>
+          <div class="block-sub">02:15 PM – 02:45 PM · 30 min</div>
         </div>
-        <div class="block-time">02:00 PM</div>
+        <div class="block-time">02:15 PM</div>
       </div>
-      <div class="block gym">
+      <div class="block swim">
         <div class="dot-bar"></div>
-        <div class="block-icon">🏋️</div>
+        <div class="block-icon">🏊</div>
         <div class="block-info">
-          <div class="block-label">GYM — Full Body Workout C</div>
-          <div class="block-sub">04:00 PM – 05:30 PM · 1.5 hrs</div>
+          <div class="block-label">Swimming Session</div>
+          <div class="block-sub">02:45 PM – 04:00 PM · 1h 15min</div>
+        </div>
+        <div class="block-time">02:45 PM</div>
+      </div>
+      <div class="block prep">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚿</div>
+        <div class="block-info">
+          <div class="block-label">Shower & Snack</div>
+          <div class="block-sub">04:00 PM – 04:30 PM · 30 min</div>
         </div>
         <div class="block-time">04:00 PM</div>
       </div>
@@ -580,18 +618,82 @@
         <div class="block-icon">💻</div>
         <div class="block-info">
           <div class="block-label">Skill Development</div>
-          <div class="block-sub">05:30 PM – 07:00 PM · 1.5 hrs</div>
+          <div class="block-sub">04:30 PM – 09:00 PM · 4.5 hrs</div>
         </div>
-        <div class="block-time">05:30 PM</div>
+        <div class="block-time">04:30 PM</div>
+      </div>
+      <div class="block sleep">
+        <div class="dot-bar"></div>
+        <div class="block-icon">😴</div>
+        <div class="block-info">
+          <div class="block-label">Sleeping</div>
+          <div class="block-sub">09:00 PM – 03:30 AM · 6.5 hrs</div>
+        </div>
+        <div class="block-time">09:00 PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FRIDAY ── -->
+  <div class="day-card fri">
+    <div class="day-header">
+      <span class="day-name">🗓 Friday</span>
+      <span class="day-badge">Uber + Walk + Gym + Skill</span>
+    </div>
+    <div class="schedule">
+      <div class="block uber">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚗</div>
+        <div class="block-info">
+          <div class="block-label">Uber Driving</div>
+          <div class="block-sub">04:15 AM – 02:15 PM · 10 hrs</div>
+        </div>
+        <div class="block-time">04:15 AM</div>
       </div>
       <div class="block meal">
         <div class="dot-bar"></div>
-        <div class="block-icon">🍽️🔋</div>
+        <div class="block-icon">🍽️</div>
         <div class="block-info">
-          <div class="block-label">Dinner + Car Charge</div>
-          <div class="block-sub">07:00 PM – 08:30 PM · 1.5 hrs</div>
+          <div class="block-label">Lunch & Recovery</div>
+          <div class="block-sub">02:15 PM – 02:45 PM · 30 min</div>
         </div>
-        <div class="block-time">07:00 PM</div>
+        <div class="block-time">02:15 PM</div>
+      </div>
+      <div class="block walk">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🚶</div>
+        <div class="block-info">
+          <div class="block-label">Leisure Walk</div>
+          <div class="block-sub">02:45 PM – 03:30 PM · 45 min</div>
+        </div>
+        <div class="block-time">02:45 PM</div>
+      </div>
+      <div class="block gym">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🏋️</div>
+        <div class="block-info">
+          <div class="block-label">GYM — Full Body Workout C</div>
+          <div class="block-sub">03:30 PM – 05:00 PM · 1.5 hrs</div>
+        </div>
+        <div class="block-time">03:30 PM</div>
+      </div>
+      <div class="block meal">
+        <div class="dot-bar"></div>
+        <div class="block-icon">🥗</div>
+        <div class="block-info">
+          <div class="block-label">Post-Workout Meal & Shower</div>
+          <div class="block-sub">05:00 PM – 05:30 PM · 30 min</div>
+        </div>
+        <div class="block-time">05:00 PM</div>
+      </div>
+      <div class="block skill">
+        <div class="dot-bar"></div>
+        <div class="block-icon">💻</div>
+        <div class="block-info">
+          <div class="block-label">Skill Development</div>
+          <div class="block-sub">05:30 PM – 09:00 PM · 3.5 hrs</div>
+        </div>
+        <div class="block-time">05:30 PM</div>
       </div>
       <div class="block sleep">
         <div class="dot-bar"></div>
@@ -612,21 +714,12 @@
       <span class="day-badge">Double Uber Shift</span>
     </div>
     <div class="schedule">
-      <div class="block prep">
-        <div class="dot-bar"></div>
-        <div class="block-icon">☕</div>
-        <div class="block-info">
-          <div class="block-label">Morning Prep & Breakfast</div>
-          <div class="block-sub">05:00 AM – 06:00 AM · 1 hr</div>
-        </div>
-        <div class="block-time">05:00 AM</div>
-      </div>
       <div class="block uber">
         <div class="dot-bar"></div>
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving — Morning Shift</div>
-          <div class="block-sub">06:00 AM – 12:00 PM · 6 hrs</div>
+          <div class="block-sub">06:00 AM – 02:00 PM · 8 hrs</div>
         </div>
         <div class="block-time">06:00 AM</div>
       </div>
@@ -635,52 +728,52 @@
         <div class="block-icon">🍽️</div>
         <div class="block-info">
           <div class="block-label">Lunch Break</div>
-          <div class="block-sub">12:00 PM – 01:00 PM · 1 hr</div>
+          <div class="block-sub">02:00 PM – 02:30 PM · 30 min</div>
         </div>
-        <div class="block-time">12:00 PM</div>
+        <div class="block-time">02:00 PM</div>
       </div>
       <div class="block personal">
         <div class="dot-bar"></div>
         <div class="block-icon">🏡</div>
         <div class="block-info">
           <div class="block-label">Rest / Personal Errands / Nap</div>
-          <div class="block-sub">01:00 PM – 04:00 PM · 3 hrs</div>
+          <div class="block-sub">02:30 PM – 05:30 PM · 3 hrs</div>
         </div>
-        <div class="block-time">01:00 PM</div>
+        <div class="block-time">02:30 PM</div>
       </div>
       <div class="block prep">
         <div class="dot-bar"></div>
         <div class="block-icon">🥤</div>
         <div class="block-info">
-          <div class="block-label">Snack + Prep for Evening</div>
-          <div class="block-sub">04:00 PM – 04:30 PM · 30 min</div>
+          <div class="block-label">Snack & Prep for Evening Shift</div>
+          <div class="block-sub">05:30 PM – 06:00 PM · 30 min</div>
         </div>
-        <div class="block-time">04:00 PM</div>
+        <div class="block-time">05:30 PM</div>
       </div>
       <div class="block uber">
         <div class="dot-bar"></div>
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving — Evening Shift</div>
-          <div class="block-sub">04:30 PM – 10:30 PM · 6 hrs</div>
+          <div class="block-sub">06:00 PM – 10:00 PM · 4 hrs</div>
         </div>
-        <div class="block-time">04:30 PM</div>
+        <div class="block-time">06:00 PM</div>
       </div>
       <div class="block meal">
         <div class="dot-bar"></div>
         <div class="block-icon">🍲</div>
         <div class="block-info">
           <div class="block-label">Dinner & Wind Down</div>
-          <div class="block-sub">10:30 PM – 11:00 PM · 30 min</div>
+          <div class="block-sub">10:00 PM – 11:00 PM · 1 hr</div>
         </div>
-        <div class="block-time">10:30 PM</div>
+        <div class="block-time">10:00 PM</div>
       </div>
       <div class="block sleep">
         <div class="dot-bar"></div>
         <div class="block-icon">😴</div>
         <div class="block-info">
           <div class="block-label">Sleeping</div>
-          <div class="block-sub">11:00 PM – 05:00 AM · 6 hrs</div>
+          <div class="block-sub">11:00 PM – 05:30 AM · 6.5 hrs</div>
         </div>
         <div class="block-time">11:00 PM</div>
       </div>
@@ -694,32 +787,23 @@
       <span class="day-badge">Uber + Church</span>
     </div>
     <div class="schedule">
-      <div class="block prep">
-        <div class="dot-bar"></div>
-        <div class="block-icon">☕</div>
-        <div class="block-info">
-          <div class="block-label">Morning Prep & Breakfast</div>
-          <div class="block-sub">05:00 AM – 06:00 AM · 1 hr</div>
-        </div>
-        <div class="block-time">05:00 AM</div>
-      </div>
       <div class="block uber">
         <div class="dot-bar"></div>
         <div class="block-icon">🚗</div>
         <div class="block-info">
           <div class="block-label">Uber Driving</div>
-          <div class="block-sub">06:00 AM – 01:00 PM · 7 hrs</div>
+          <div class="block-sub">06:15 AM – 01:15 PM · 7 hrs</div>
         </div>
-        <div class="block-time">06:00 AM</div>
+        <div class="block-time">06:15 AM</div>
       </div>
       <div class="block meal">
         <div class="dot-bar"></div>
         <div class="block-icon">🍽️</div>
         <div class="block-info">
           <div class="block-label">Lunch & Rest</div>
-          <div class="block-sub">01:00 PM – 02:00 PM · 1 hr</div>
+          <div class="block-sub">01:15 PM – 02:00 PM · 45 min</div>
         </div>
-        <div class="block-time">01:00 PM</div>
+        <div class="block-time">01:15 PM</div>
       </div>
       <div class="block personal">
         <div class="dot-bar"></div>
@@ -753,7 +837,7 @@
         <div class="block-icon">😴</div>
         <div class="block-info">
           <div class="block-label">Sleeping</div>
-          <div class="block-sub">09:00 PM – 02:00 AM · 5 hrs</div>
+          <div class="block-sub">09:00 PM – 03:30 AM · 6.5 hrs</div>
         </div>
         <div class="block-time">09:00 PM</div>
       </div>
@@ -774,7 +858,7 @@
       <div class="gym-card-header">
         <span class="emoji">💪</span>
         <div>
-          <div class="day-tag">MONDAY</div>
+          <div class="day-tag">MONDAY · 3:30 PM</div>
           <h3>Full Body Workout A</h3>
         </div>
       </div>
@@ -796,7 +880,7 @@
       <div class="gym-card-header">
         <span class="emoji">🔥</span>
         <div>
-          <div class="day-tag">WEDNESDAY</div>
+          <div class="day-tag">WEDNESDAY · 12:30 PM</div>
           <h3>Full Body Workout B</h3>
         </div>
       </div>
@@ -819,7 +903,7 @@
       <div class="gym-card-header">
         <span class="emoji">⚡</span>
         <div>
-          <div class="day-tag">FRIDAY</div>
+          <div class="day-tag">FRIDAY · 3:30 PM</div>
           <h3>Full Body Workout C</h3>
         </div>
       </div>
